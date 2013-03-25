@@ -1,7 +1,8 @@
-# makefile -- for grandios directory, CRB, Oct 1, 2012
+# makefile -- for grandios directory, CRB, Mar 24, 2013
+# 03/24/2013 CRB Added -fsigned-char for ARM
 
 grandios.o:	grandios.c grandios.h
-	gcc -c -m32 -DWITHMAIN grandios.c -o grandios.o
+	gcc -c -m32 -DWITHMAIN -fsigned-char grandios.c -o grandios.o
 
 fiotinc.o:	fiotinc.c grandios.h
 	gcc -c -m32 fiotinc.c -o fiotinc.o

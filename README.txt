@@ -1,4 +1,5 @@
 README.txt -- For grandios repository on GitHub, CRB, Oct 3, 2012
+03/24/2013 CRB Correct make testfiotinc and added -fsigned-char.
 
 Files in this directory:
 
@@ -25,14 +26,15 @@ Use:
 	make grandios.o
 to make the object module to be linked with stage2 or the fiotinc test
 program. Note that makefile uses:
-	gcc -c -m32 -DWITHMAIN grandios.c
+	gcc -c -m32 -DWITHMAIN -fsigned-char grandios.c
 where -m32 specifies 32-bit object format for x86 systems, and -DWITHMAIN
 defines WITHMAIN so that grandios contains the C main() program. This main()
 program initializes the I/O system and calls the application program via
-progr().
+progr(). The -fsigned-char forces gcc to allow -1 to be recognized as
+end-of-line on ARM which otherwise uses unsigned char as default.
 
 Use:
-	make fiotinc
+	make testfiotinc
 to compile and link the test program. Then run the test program with:
    	make test
 The test program will read the test data file iotd.tst on channel 1 and write

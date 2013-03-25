@@ -1,5 +1,6 @@
-/* grandios.c -- Grand I/O in C for Stage2, Sep 30, 2012 */
+/* grandios.c -- Grand I/O in C for Stage2, CRB, Mar 24, 2013 */
 // 12/13/1994 CRB Approximate date of original coding.
+// 04/24/2013 CRB Now using -fsigned-char to force EOL as -1 to work.
 //
 
 /**********************************************************************\
@@ -188,7 +189,7 @@ static int jwrit(int jch, char *jba)
     int iret;
     char * p = jba;
 
-    while ( *p != -1 )		// scan for end-of-line
+    while ( *p != -1 )		// scan for EOL
         p++;
     if ( p - jba >= MAXLEN )	// truncate line if overrun
         p = jba + MAXLEN;

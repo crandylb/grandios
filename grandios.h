@@ -1,5 +1,6 @@
-/* grandios.h -- Stage2 I/O in C Header, CRB, Sep 30, 2012 */
+/* grandios.h -- Stage2 I/O in C Header, CRB, Mar 24, 2013 */
 // 12/13/1994 CRB Approximate date of original coding.
+// 04/24/2013 CRB Now using -fsigned-char to force EOL as -1 to work.
 //
 
 #define MAXCHAN   9	/* maximum channel number */
