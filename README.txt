@@ -1,6 +1,7 @@
 README.txt -- For grandios repository on GitHub, CRB, Oct 3, 2012
 03/24/2013 CRB Correct make testfiotinc and added -fsigned-char.
 10/11/2013 CRB Add debug version.
+01/18/2014 CRB Add LICENSE
 
 Files in this directory:
 
@@ -16,6 +17,7 @@ fiot	      subdirectory containing test output:
   fiot.ch3      test output on channel 3
   fiot.ch4      test output on channel 4
 grandios.odt  document describing the Grand I/O system
+LICENSE	      GPLv2
 README.txt    this file
 
 grandios.c and grandios.h:
@@ -49,7 +51,8 @@ the grandios.o object file, to the stage2 directory you are using.
 fiot:
 
 This is the I/O test provided by Waite with the Mobile Programming System for
-testing the I/O module originally written in Fortran..
+testing the I/O module originally written in Fortran. The GPLv2 license does
+not apply to this file, but is used by implied permission from Prof. Waite.
 
 Use:
 	make testfiotinc
@@ -76,3 +79,8 @@ fiot file should be identical to the example files in the fiot subdirectory.
 
 When you are satisfied with the test output leave the grandios.o object module
 in your grandios directory where it will be used to link with stage2.
+
+LICENSE
+
+The GNU general public license allpies to all files written by me except
+fiot.txt.
